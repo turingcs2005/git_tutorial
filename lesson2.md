@@ -12,9 +12,6 @@ git add *.js && git commit -m 'initial commit'
 # skipping staging area, i.e. stage every file and commit in one go
 git commit -a -m 'updated lesson2.md'
 
-# clone an existing repo
-git clone [url]
-
 # check status of your files
 git status
 ```
@@ -80,5 +77,55 @@ git reset HEAD [file name]
 
 # discard changes
 git checkout -- [file name]
+
+```
+
+### 7. working with remotes
+
+```bash
+# clone an existing repo
+git clone [remote url]
+
+# inspect remote
+git remote show [remote name]
+
+# show all remote repo names
+git remote 
+
+# show remote repo names + url
+git remote -v
+
+# add a remote repo
+git remote add [remote name] [remote url]
+
+# remove a remote repo
+git remote remove [remote name]
+
+# rename a remote repo
+git remote rename [old name] [new name]
+
+# push to remote
+git push [remote name] [branch name]
+
+# fetch files without merge
+git fetch [remote name]
+
+# merge current branch with a remote branch 
+git merge [remote name]/[branch name]
+
+# fetch and then merge
+git pull [remote name] [branch anme]
+```
+
+### 8. tagging
+```bash
+# create an annotated tag
+git tag -a v1.4.1 -m 'version 1.4.1'
+
+# list available tags
+git tag
+
+# list tags with pattern 'v1.1.*'
+git tag -l 'v1.1.*'
 
 ```
