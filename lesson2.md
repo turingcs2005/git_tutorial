@@ -78,16 +78,19 @@ git reset HEAD [file name]
 # discard changes
 git checkout -- [file name]
 
+# reset to previous commit
+git reset [previous commit, or HEAD] --hard
+
 ```
 
 ### 7. working with remotes
 
 ```bash
 # clone an existing repo
-git clone [remote url]
+git clone [remote repo url]
 
 # inspect remote
-git remote show [remote name]
+git remote show [remote repo name]
 
 # show all remote repo names
 git remote 
@@ -96,25 +99,28 @@ git remote
 git remote -v
 
 # add a remote repo
-git remote add [remote name] [remote url]
+git remote add [remote repo name] [remote repo url]
+
+# push current branch to a remote branch (often executed right after 'git remote add...')
+git push -u [remote repo url] [remote branch name]
 
 # remove a remote repo
-git remote remove [remote name]
+git remote remove [remote repo name]
 
 # rename a remote repo
-git remote rename [old name] [new name]
+git remote rename [old remote repo name] [new remote repo name]
 
 # push to remote
-git push [remote name] [branch name]
+git push [remote rempo name] [remote branch name]
 
 # fetch files without merge
-git fetch [remote name]
+git fetch [remote repo name]
 
 # merge current branch with a remote branch 
-git merge [remote name]/[branch name]
+git merge [remote repo name]/[remote branch name]
 
 # fetch and then merge
-git pull [remote name] [branch anme]
+git pull [remote repo name] [remote branch name]
 ```
 
 ### 8. tagging
@@ -127,5 +133,11 @@ git tag
 
 # list tags with pattern 'v1.1.*'
 git tag -l 'v1.1.*'
+
+# tag a previous commit
+git tag -a [tag] [hash key of a previous commit]
+
+# push all local tags to remote server
+git push [remote name] --tags
 
 ```
