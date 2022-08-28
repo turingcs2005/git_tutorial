@@ -1,4 +1,4 @@
-## Lesson 2
+## Lesson 2: The Basics
 
 ### 1. initialize, check status, stage and commit, clone
 ```bash
@@ -31,9 +31,54 @@ git diff [commit1] [commit2]
 
 ```
 
-### 3. remove files
+### 3. remove file and move file
 ```bash
-# after removing a file
+# remove a previously commited file
 git rm [file name]
+git commit -m 'removed file'
+
+# move a file
+git mv [old file] [new file]
+
+# git mv is equivalent to
+# mv [fold file] [new file]
+# git rm [old file]
+# git add [new file]
+```
+
+### 4. git log
+```bash
+git log
+
+# -p: show difference between commits; -2: limit output to only the last 2 entries
+git log -p -2 
+
+# one-line log
+git log --pretty=oneline 
+
+# show hash, author, subject plus ASCII graph
+git log --pretty=format:"%h %an %s" --graph
+
+# commits since 2 weeks ago
+git log --since=2.weeks
+# You can use minutes, hours, days, weeks, months, years...
+```
+
+### 5. amend last commit
+```bash
+git commit -m 'forgot to stage a file'
+git add [forgotten file]
+git commit --amend
+# 2nd commit replace the first
+
+```
+
+### 6. unstage a staged file; discard changes; reset to a previous commit
+```bash
+# unstage a file
+git reset HEAD [file name]
+
+# discard changes
+git checkout -- [file name]
 
 ```

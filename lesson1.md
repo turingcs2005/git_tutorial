@@ -1,4 +1,4 @@
-## Lesson 1
+## Lesson 1: Getting Started
 ### 1. The Three States
 1. <mark>commited</mark> - data is safely stored in your local databse
 2. <mark>modified</mark> - file changed but not commited to database yet
