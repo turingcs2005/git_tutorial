@@ -14,4 +14,13 @@ git clone [url]
 
 # check status of your files
 git status
+
+# check what you've changed but not yet staged
+git diff
+
+# compare staged changes to your last commit
+git diff --staged
+
+# skipping staging area, i.e. add and commit in one go
+git commit -a -m 'updated lesson2.md'
 ```
